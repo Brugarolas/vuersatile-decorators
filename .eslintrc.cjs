@@ -21,5 +21,8 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest'
+  },
+  rules: {
+    'prefer-rest-params': 0
   }
 }
