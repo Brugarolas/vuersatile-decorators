@@ -1,7 +1,22 @@
-<script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+<script lang="ts">
+import { Component, Vue } from '../../lib/index';
+
+@Component
+export default class MyComponent extends Vue {
+
+    //This is a vue reactive property.
+    text = 'Example code'
+
+    //This is a vue component method.
+    method() {
+        console.log(this.text)
+    }
+
+    //This is a vue component lifecycle hook.
+    mounted() {
+        this.method()
+    }
+}
 </script>
 
 <template>

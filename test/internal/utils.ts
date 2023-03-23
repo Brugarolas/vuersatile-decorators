@@ -1,8 +1,8 @@
 
 import { expect } from 'chai';
 import 'mocha';
-import { Base } from '../../dist'
-import * as Utils from '../../dist/utils'
+import { Base } from '../../lib/index'
+import * as Utils from '../../lib/util'
 
 
 class Comp1Sup extends Base {
