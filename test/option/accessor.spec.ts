@@ -2,7 +2,7 @@
 import { mount } from '@vue/test-utils'
 import { expect } from 'chai';
 import 'mocha';
-import { Component, Base ,Vanilla} from '../../dist'
+import { Component, Base ,Vanilla} from '../../lib'
 
 @Component
 export class Comp extends Base {
@@ -29,7 +29,7 @@ describe('decorator computed',
         it('default', () => {
             expect('function').to.equal(typeof Object.getOwnPropertyDescriptor(vm,'getData')!.get)
             expect('function').to.equal(typeof Object.getOwnPropertyDescriptor(vm,'setData')!.set)
-     
+
         })
     }
 )

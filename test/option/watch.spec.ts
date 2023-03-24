@@ -1,7 +1,7 @@
 
 import { expect } from 'chai';
 import 'mocha';
-import { Component, Watch, Base } from '../../dist'
+import { Component, Watch, Base } from '../../lib'
 
 @Component
 export class Comp extends Base {

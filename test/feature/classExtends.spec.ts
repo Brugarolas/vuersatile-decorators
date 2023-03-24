@@ -1,7 +1,8 @@
 
 import { expect } from 'chai';
 import 'mocha';
-import { Component, Base } from '../../dist'
+import { Component, Base } from '../../lib'
+
 class Sup extends Base {
     dataSup = 'dataSup value'
     data = 'data-sup value'

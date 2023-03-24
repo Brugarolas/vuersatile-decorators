@@ -1,7 +1,7 @@
 
 import { expect } from 'chai';
 import 'mocha';
-import { Component, ComponentBase, Base } from '../../dist'
+import { Component, ComponentBase, Base } from '../../lib'
 
 @ComponentBase({
     name:'ComponentBase'
@@ -32,12 +32,12 @@ describe('feature component extends',
             expect('function').to.equal(typeof CompContext?.methods?.methodComp)
             expect('methodComp value').to.equal(CompContext.methods.methodComp())
 
-        
+
 
 
         })
         it('sup',()=>{
-        
+
             expect('object').to.equal(typeof SupContext)
             expect('function').to.equal(typeof SupContext?.data)
             const supData = SupContext.data()
