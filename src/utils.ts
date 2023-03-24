@@ -1,11 +1,11 @@
 import { Base } from './index'
 import type { BaseTypeIdentify } from './index'
-import type { InjectConfig } from './option/inject';
-import type { EmitConfig } from './option/emit';
-import type { PropsConfig } from './option/props';
-import type { HookConfig } from './option/methods-and-hooks';
-import type { VModelConfig } from './option/vmodel';
-import type { WatchConfig } from './option/watch';
+import type { InjectConfig } from './decorators/inject';
+import type { EmitConfig } from './decorators/emit';
+import type { PropsConfig } from './decorators/props';
+import type { HookConfig } from './decorators/methods-and-hooks';
+import type { VModelConfig } from './decorators/vmodel';
+import type { WatchConfig } from './decorators/watch';
 
 const SlotSymbol = Symbol('vue-facing-decorator-slot')
 
@@ -138,7 +138,7 @@ export function excludeNames(names: string[], slot: Slot) {
             }
             currSlot = getSuperSlot(currSlot.master)
         }
-    
+
         return true
     })
 }

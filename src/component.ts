@@ -1,22 +1,22 @@
 import { defineComponent, type ComponentCustomOptions } from 'vue';
 import { obtainSlot, getSuperSlot } from './utils'
-import { build as optionComputed } from './option/computed'
-import { build as optionData } from './option/data'
-import { build as optionMethodsAndHooks } from './option/methods-and-hooks'
-import { build as optionRef } from './option/ref'
-import { build as optionWatch } from './option/watch'
-import { build as optionProps } from './option/props'
-import { build as optionInject } from './option/inject'
-import { build as optionEmit } from './option/emit'
-import { build as optionVModel } from './option/vmodel'
-import { build as optionAccessor } from './option/accessor'
+import { build as optionComputed } from './options/computed'
+import { build as optionData } from './options/data'
+import { build as optionMethodsAndHooks } from './options/methods-and-hooks'
+import { build as optionRef } from './options/ref'
+import { build as optionWatch } from './options/watch'
+import { build as optionProps } from './options/props'
+import { build as optionInject } from './options/inject'
+import { build as optionEmit } from './options/emit'
+import { build as optionVModel } from './options/vmodel'
+import { build as optionAccessor } from './options/accessor'
 import type { OptionBuilder } from './option-builder'
 import type { VueCons } from './index'
 export type Cons = VueCons
 
 // export interface Cons { new(): any, prototype: any }
 function ComponentOption(cons: Cons, extend?: any) {
-    
+
     const optionBuilder: OptionBuilder = {}
     optionVModel(cons, optionBuilder)
     optionComputed(cons, optionBuilder)//after VModel

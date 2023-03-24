@@ -1,6 +1,6 @@
-import type { WatchConfig } from './option/watch'
-import type { PropsConfig } from './option/props'
-import type { InjectConfig } from './option/inject'
+import type { WatchConfig } from './decorators/watch'
+import type { PropsConfig } from './decorators/props'
+import type { InjectConfig } from './decorators/inject'
 
 export interface OptionBuilder {
     name?: string

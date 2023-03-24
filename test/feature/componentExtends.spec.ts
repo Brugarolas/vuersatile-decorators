@@ -1,7 +1,7 @@
 
 import { expect } from 'chai';
 import 'mocha';
-import { Component, ComponentBase, Base } from '../../lib'
+import { Component, ComponentBase, Base } from '../../src'
 
 @ComponentBase({
     name:'ComponentBase'

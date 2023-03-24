@@ -1,13 +1,6 @@
 import type { Cons } from '../component'
 import { type OptionBuilder, applyAccessors } from '../option-builder'
-import { obtainSlot, optoinNullableMemberDecorator } from '../utils'
-
-export const decorator = optoinNullableMemberDecorator(function (proto: any, name: string) {
-    const slot = obtainSlot(proto)
-    const map = slot.obtainMap('ref')
-    map.set(name, true)
-})
-
+import { obtainSlot } from '../utils'
 
 export function build(cons: Cons, optionBuilder: OptionBuilder) {
     const slot = obtainSlot(cons.prototype)

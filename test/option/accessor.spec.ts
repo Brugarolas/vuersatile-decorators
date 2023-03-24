@@ -2,7 +2,7 @@
 import { mount } from '@vue/test-utils'
 import { expect } from 'chai';
 import 'mocha';
-import { Component, Base ,Vanilla} from '../../lib'
+import { Component, Base ,Vanilla} from '../../src'
 
 @Component
 export class Comp extends Base {

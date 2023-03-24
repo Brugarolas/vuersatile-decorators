@@ -1,7 +1,7 @@
 
 import { expect } from 'chai';
 import 'mocha';
-import { Component, Ref, Base } from '../../lib'
+import { Component, Ref, Base } from '../../src'
 
 @Component
 export class Comp extends Base {

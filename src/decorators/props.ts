@@ -1,5 +1,3 @@
-import type { Cons } from '../component'
-import type { OptionBuilder } from '../option-builder'
 import { obtainSlot, optoinNullableMemberDecorator } from '../utils'
 
 export interface PropsConfig {
@@ -15,15 +13,3 @@ export const decorator = optoinNullableMemberDecorator(function (proto: any, nam
     const opt = Object.assign({}, option ?? {})
     map.set(name, opt as PropsConfig)
 });
-
-export function build(cons: Cons, optionBuilder: OptionBuilder) {
-    optionBuilder.props ??= {}
-    const slot = obtainSlot(cons.prototype)
-    const names = slot.obtainMap('props')
-
-    if (names) {
-        names.forEach((value, name) => {
-            optionBuilder.props![name] = value
-        })
-    }
-}

@@ -1,7 +1,7 @@
 
 import { expect } from 'chai';
 import 'mocha';
-import { Component, Base, Prop } from '../../lib'
+import { Component, Base, Prop } from '../../src'
 import { mount } from '@vue/test-utils'
 
 @Component
